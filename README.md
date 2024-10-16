@@ -62,4 +62,84 @@ Bitwise operators in C++ perform operations on the binary representations of int
 - **Hardware Interfacing**: Directly interacts with hardware registers where bit manipulation is required.
 
 
-**Output**: -      ![image](https://github.com/user-attachments/assets/8b42235a-d510-4ad7-965b-92a5ea89fe4d)
+## Take two numbers as input from user and perform bitwise logical operations on those numbers.
+## Code: - 
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num1, num2;
+
+    // Input two numbers from the user
+    cout << "Enter the first number: ";
+    cin >> num1;
+
+    cout << "Enter the second number: ";
+    cin >> num2;
+
+    // Perform bitwise operations
+    cout << "Bitwise AND (&) of " << num1 << " and " << num2 << ": " << (num1 & num2) << endl;
+    cout << "Bitwise OR (|) of " << num1 << " and " << num2 << ": " << (num1 | num2) << endl;
+    cout << "Bitwise XOR (^) of " << num1 << " and " << num2 << ": " << (num1 ^ num2) << endl;
+
+    // Perform NOT operation (only on first number for demonstration)
+    cout << "Bitwise NOT (~) of " << num1 << ": " << (~num1) << endl;
+    cout << "Bitwise NOT (~) of " << num2 << ": " << (~num2) << endl;
+
+    return 0;
+}
+
+## Output: - 
+![image](https://github.com/user-attachments/assets/f4247852-750e-4404-9861-d9ae9089bc13)
+
+
+
+## Experiment no. 4: Take a number as input from user along with bit position numbers to be set and reset in the inputted number  c++ : - 
+
+
+
+## Code: - 
+#include <iostream>
+using namespace std;
+
+// Function to set a bit at the given position
+int setBit(int num, int pos) {
+    return num | (1 << pos);
+}
+
+// Function to reset a bit at the given position
+int resetBit(int num, int pos) {
+    return num & ~(1 << pos);
+}
+
+int main() {
+    int num, setPos, resetPos;
+
+    // Input number, bit position to set, and bit position to reset
+    cout << "Enter a number: ";
+    cin >> num;
+
+    cout << "Enter the bit position to set: ";
+    cin >> setPos;
+
+    cout << "Enter the bit position to reset: ";
+    cin >> resetPos;
+
+    // Set the specified bit
+    num = setBit(num, setPos);
+
+    // Reset the specified bit
+    num = resetBit(num, resetPos);
+
+    // Output the result
+    cout << "Modified number: " << num << endl;
+
+    return 0;
+}
+
+
+## Output: - 
+![image](https://github.com/user-attachments/assets/46d0b99d-ecc4-4afd-afa6-fa5c85fda5c7)
+
+
+
